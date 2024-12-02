@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
         </Link>
         <div className="relative mt-8">
           <img
-            src="https://imgur.com/a/ossPTPY"
+            src="https://i.imgur.com/6aFCVlV.png"
             alt="iPhone"
             className="w-128 h-auto"
           />
