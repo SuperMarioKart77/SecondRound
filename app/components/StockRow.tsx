@@ -25,25 +25,25 @@ const StockRow: React.FC<StockRowProps> = ({ name, salesprice, quantity }) => {
 
   return (
     <div className="container mx-auto p-1 bg-white shadow-lg rounded-xl overflow-hidden hover:bg-blue-200 transition duration-300">
-      <div ref={rowRef} className="flex">
+      <div ref={rowRef} className="flex flex-col md:flex-row">
         {/* Product Name */}
-        <div className="flex items-center space-x-1 p-1 w-1/4 min-w-0">
+        <div className="flex items-center space-x-1 p-1 w-full md:w-1/4 min-w-0">
           <h3 className="text-lg font-semibold truncate w-full">{productName}</h3>
         </div>
 
-        {/* Grade */}
-        <div className="flex items-center space-x-1 p-1 w-1/4">
+        {/* Grade (hidden on mobile) */}
+        <div className="hidden md:flex items-center space-x-1 p-1 w-1/4">
           <p className="text-lg">{grade}</p>
         </div>
 
         {/* Quantity */}
-        <div className="flex items-center justify-center text-center p-1 w-1/4 space-x-2">
+        <div className="flex items-center justify-center text-center p-1 w-full md:w-1/4 space-x-2">
           <p className="text-lg">Quantity:</p>
           <p className="text-xl font-bold text-blue-600">{quantity}</p>
         </div>
 
         {/* Price */}
-        <div className="flex items-center justify-end p-1 w-1/4">
+        <div className="flex items-center justify-end p-1 w-full md:w-1/4">
           <p className="text-gray-700">Price: {salesprice} €</p>
         </div>
       </div>
